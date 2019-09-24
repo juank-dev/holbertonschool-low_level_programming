@@ -1,9 +1,11 @@
 #include "holberton.h"
 
 /**
- * _islower - Entry point
+ * _islower - found the lowercase characters.
  *
- * Return: Always 0 (Success)
+ * @c: c is the variable for the program.
+ *
+ * Return: Always 0.
  */
 int _islower(int c)
 {
