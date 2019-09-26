@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * print_square -  checks for checks for a digit (0 through 9).
+ * print_triangle -  checks for checks for a digit (0 through 9).
  * @size: size -  Variable
  * Return: Always 0.
  */
-void print_square(int size)
+void print_triangle(int size)
 {
 	int x, y;
 
@@ -15,7 +15,14 @@ void print_square(int size)
 		{
 			for (y = 1; y <= size; y++)
 			{
-				_putchar('#');
+				if (y <= size - x)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('#');
+				}
 			}
 			_putchar('\n');
 		}

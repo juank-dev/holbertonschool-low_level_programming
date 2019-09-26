@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
- * mul -  checks for checks for a digit (0 through 9).
- * @a: a -  Variable
- * @b: b - variable
+ * print_line -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
  * Return: Always 0.
  */
 void print_line(int n)
@@ -12,7 +11,7 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		for ( x = 1; x < n; x++)
+		for (x = 1; x < n; x++)
 		{
 			_putchar(95);
 		}
