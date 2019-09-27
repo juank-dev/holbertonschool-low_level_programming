@@ -11,23 +11,27 @@ void print_number(int n)
 
 	b = 10;
 	dig = 8;
-
-	if (n < 0)
+	if(n != -2147483648)
 	{
-		n = n * -1;
-		_putchar('-');
+		if (n < 0)
+
+		{
+			n = n * -1;
+			_putchar('-');
+		}
 	}
+	else
 	{
 		while (n / b != 0)
 		{
-		      	if (dig != 0)
+			if (dig != 0)
 			{
 				b = b * 10;
 				dig--;
 			}
 			else
 			{
-				_putchar( n / 1000000000 + '0');
+				_putchar(n / 1000000000 + '0');
 				break;
 			}
 		}
@@ -42,4 +46,5 @@ void print_number(int n)
 			b = b / 10;
 		}
 	}
+	{
 }
