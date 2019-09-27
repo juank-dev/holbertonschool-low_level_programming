@@ -7,9 +7,10 @@
  */
 void print_number(int n)
 {
-	int b, c;
+	int b, c, dig;
 
 	b = 10;
+	dig = 8;
 
 	if (n < 0)
 	{
@@ -19,7 +20,16 @@ void print_number(int n)
 	{
 		while (n / b != 0)
 		{
-			b = b * 10;
+		      	if (dig != 0)
+			{
+				b = b * 10;
+				dig--;
+			}
+			else
+			{
+				_putchar( n / 1000000000 + '0');
+				break;
+			}
 		}
 
 		b = b / 10;
