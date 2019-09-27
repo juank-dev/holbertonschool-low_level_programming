@@ -25,8 +25,11 @@ void print_number(int n)
 
 	else
 	{
-		n = n * -1;
-		_putchar ('-');
+		if (n < 0)
+		{
+			n = n * -1;
+			_putchar ('-');
+		}
 		z = n;
 	while (z / b > 9)
 	{
