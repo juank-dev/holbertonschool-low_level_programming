@@ -23,7 +23,7 @@ int main(void)
 		r = a + b;
 		a = b;
 		b = r;
-		printf(" ,%.0f",r);
+		printf(", %.0f",r);
 	}
 
 	return (0);

@@ -20,7 +20,7 @@ int main(void)
       b = r;
     if(r % 2 == 0) 
     {
-      printf(" ,%ld",r);
+      printf(", %ld",r);
     }
   }
  
