@@ -25,6 +25,6 @@ int main(void)
 		b = r;
 		printf(", %.0f",r);
 	}
-
+	putchar('\n');
 	return (0);
 }

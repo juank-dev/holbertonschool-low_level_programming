@@ -8,7 +8,6 @@
  * Return: On success 1.
  *
  */
-
 int main(void)
 {
 	int i;
@@ -23,8 +22,8 @@ int main(void)
 		r = a + b;
 		a = b;
 		b = r;
-		printf(", %ld",r);
+		printf(", %ld", r);
 	}
-
+	putchar('\n');
 	return (0);
 }
