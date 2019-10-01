@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * rev_string - print reverse characters.
- * @s: validate the character
+ * puts_half - print reverse characters.
+ * @str: validate the character
  * Return: Always 0.
  */
 void puts_half(char *str)
@@ -14,10 +14,10 @@ void puts_half(char *str)
 	{
 		i++;
 	}
-	if ( i % 2 == 1)
+	if (i % 2 == 1)
 	{
-		n = (i -1)/2;
-		while ( str[n] != '\0')
+		n = (i + 1) / 2;
+		while (str[n] != '\0')
 		{
 		_putchar(str[n]);
 		n++;
@@ -26,7 +26,7 @@ void puts_half(char *str)
 	else
 	{
 		n = (i / 2);
-		while ( str[n] != '\0')
+		while (str[n] != '\0')
 		{
 			_putchar(str[n]);
 			n++;
