@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strspn - prints buffer in hexa
+ * _strpbrk - prints buffer in hexa
  * @s: buffer
  * @accept: buffer2
  *
