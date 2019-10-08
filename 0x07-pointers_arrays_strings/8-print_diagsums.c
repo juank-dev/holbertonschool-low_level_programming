@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_chessboard - prints buffer in hexa
+ * print_diagsums - prints buffer in hexa
  * @a: cheese
- * needle: buffer2
+ * @size: buffer2
  *
  * Return: Nothing.
  */
