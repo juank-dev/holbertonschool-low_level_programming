@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 	(void)argv;
 	for (count = 0; count < argc; count++)
 	{
-		if(count +1 == argc)
+		if (count + 1 == argc)
 			printf("%i\n", count);
 	}
-	return(0);
+	return (0);
 }
