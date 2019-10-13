@@ -1,5 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - prints buffer in hexa
@@ -8,14 +10,20 @@
  *
  * Return: Nothing.
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
-	int count;
-
-	for (count = 0; count < argc; count++)
+	int mul = 1;
+	
+	printf("argc: %i\n", argc);
+	if (argc == 3)
 	{
-		if(count +1 == argc)
-			printf("%s\n", argv[]);
+		mul *= atoi(argv[argc -2]);
+		mul *= atoi(argv[argc -1]);
+		printf("%d\n", mul);
+	
 	}
-	return(0);
+	else
+		printf("Error\n");
+	return (0);
+
 }
