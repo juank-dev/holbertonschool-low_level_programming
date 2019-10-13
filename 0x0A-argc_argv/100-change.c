@@ -12,52 +12,35 @@
  */
 int main(int argc, char *argv[])
 {
-	int j = 0, i = 1, coins = 0, change = 0;
+	int j = 0, i = 1, coins, change = 0, a;
+	int cents[5] = {25, 10, 5, 2, 1};
 
-	printf("%d ", argc);
 	if (argc == 2)
 	{
-		for(j = 0; argv [i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if(!(isdigit(argv[i][j])))
+			if (!(isdigit(argv[i][j])))
 			{
 				printf("Error\n");
-				return(1);
+				return (1);
 			}
 		}
 		coins = atoi(argv[i]);
-		printf("%d,",coins);
-		while(coins % 25 == 0)
+		for (a = 0; a < 5; a++)
 		{
-			coins -= 25;
-			change++;
-		}
-		while(coins % 10 == 0)
-		{
-			coins -= 10;
-			change++;
-		}
-		while(coins % 5 == 0)
-		{
-			coins -= 5;
-			change++;
-		}
-		while(coins % 2 == 0)
-		{
-			coins -= 2;
-			change++;
-		}
-		while(coins % 1 == 0)
-		{
-			coins -= 1;
-			change++;
+
+			while (coins >= cents[a])
+			{
+				coins -= cents[a];
+				change += 1;
+			}
 		}
 		printf("%d\n", change);
 	}
 	else
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
 	return (0);
 }
