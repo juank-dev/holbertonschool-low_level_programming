@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * _strdup - function that returns a pointer to a newly allocated space in
- * memory, which contains a copy of the string given as a parameter.
+ * str_concat - Write a function that concatenates two strings.
  *
- * @str: array
+ * @s1: array 1
+ * @s2: array 2
  *
  * Return: Pointer
  */
