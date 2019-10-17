@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
 		}
 		longitud  +=  j + 1;
 	}
-	string = malloc(sizeof(char) * (longitud + 1 + ac));
+	string = malloc(sizeof(char) * (longitud + 1));
 
 	if (string == NULL)
 	{
