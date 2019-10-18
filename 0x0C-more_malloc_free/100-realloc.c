@@ -3,34 +3,17 @@
 #include <stdlib.h>
 
 /**
- * _strcon - function that concatenates two strings.
- * @s: number min.
- * @p: number max.
- * @n: array input.
- * Return: Always 0.
- */
-char *_strcon(char *s, char *p, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-	{
-		*(s + i) = *(p + i);
-	}
-	return (s);
-}
-
-
-/**
  * _realloc - function that concatenates two strings.
  * @old_size: number min.
  * @new_size: number max.
- * @ptr: array input.
+ * @s: array input.
  * Return: Always 0.
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *s, unsigned int old_size, unsigned int new_size)
 {
-	void *str;
+	char *str;
+	char *ptr = s;
+	unsigned int i;
 
 	ptr = malloc(old_size);
 
@@ -49,6 +32,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (str);
 	}
 	str = malloc(new_size);
-	_strcon(str, ptr, old_size);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < old_size; i++)
+	{
+		*(str + i) = *(ptr + i);
+	}
 	return (str);
 }
