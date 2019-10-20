@@ -1,6 +1,6 @@
 # holbertonschool-low_level_programming
 
-## **IN THIS REPOSITORY REVIEW THE NEXT TOPICS IN C PROGRAMMING LANGUAJE**
+## **IN THIS REPOSITORY REVIEW THE NEXT TOPICS IN C PROGRAMMING LANGUAGE**
 
 ![Alt](https://i.imgur.com/cdYTRZi.jpg)
 
