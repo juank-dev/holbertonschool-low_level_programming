@@ -36,7 +36,7 @@ Including a header file is equal to copying the content of the header file but w
 
 Both the user and the system header files are included using the preprocessing directive #include. It has the following two forms −
 
-> **#include <file **
+> **#include <file**
 * This form is used for system header files. It searches for a file named 'file' in a standard list of system directories. You can prepend directories to this list with the -I option while compiling your source code.
 
 > **#include "file"**
