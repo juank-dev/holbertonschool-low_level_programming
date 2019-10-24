@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "function_pointers.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - check the program
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 	int a, b, operator;
 
 
-	if (argc != 4)
+	if (argc != 4 || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(98);
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 		break;
 	default:
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	a = atoi(argv[1]);
