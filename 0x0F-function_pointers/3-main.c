@@ -15,10 +15,15 @@ int main(int argc, char *argv[])
 	int a, b, operator;
 
 
-	if (argc != 4 || strlen(argv[2]) != 1)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
+	}
+	if (strlen(argv[2]) != 1)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 	operator = argv[2][0];
 	switch (operator)
