@@ -3,8 +3,9 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - check the code for Holberton School students.
+ * print_numbers - check the code for Holberton School students.
  * @n: number of arguments
+ * @separator: character separator of numbers
  * Return: Always 0.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -22,12 +23,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(numbers, int));
-		if ( n == i + 1)
+		if (n == i + 1)
 		{
 			break;
 		}
 		printf(",");
-	 }
+	}
 	printf("\n");
 	va_end(numbers);
 }
