@@ -3,46 +3,63 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - check the code for Holberton School students.
- * @n: number of arguments
- * @separator: character separator of numbers
- * Return: Always 0.
+ * op_c - Print character .
+ * @form: name va_list
+ *
+ * Return: Nothing.
  */
 
 	void op_c(va_list form)
 	{
-		printf("%c",va_arg(form,int));
+		printf("%c", va_arg(form, int));
 	}
+/**
+ * op_i - Print Integer
+ * @form: name va_list
+ *
+ * Return: Nothing.
+ */
 
 	void op_i(va_list form)
 	{
-		printf("%i",va_arg(form,int));
+		printf("%i", va_arg(form, int));
 	}
+/**
+ * op_f - print FLoat numbers
+ * @form: name of va_list
+ *
+ * Return: Nothing.
+ */
 
 	void op_f(va_list form)
 	{
-		printf("%f",va_arg(form,double));
+		printf("%f", va_arg(form, double));
 	}
+/**
+ * op_s -print string
+ * @form: name va_list
+ *
+ * Return: Nothing.
+ */
 
 	void op_s(va_list form)
 	{
 		char *str;
-		str = va_arg(form,char *);
+
+		str = va_arg(form, char *);
 		if (str == NULL)
 		{
 			printf("(nil)");
+			return (0);
 		}
-		else
-		{
-		printf("%s",str);
-		}
+		printf("%s", str);
 	}
 
 /**
- * print_numbers - check the code for Holberton School students.
- * @n: number of arguments
- * @separator: character separator of numbers
- * Return: Always 0.
+ * print_all - check the code for Holberton School students.
+ * @format: number of arguments in character format
+ *
+ * Return: Nothing.
  */
 
 void print_all(const char * const format, ...)
@@ -51,8 +68,9 @@ void print_all(const char * const format, ...)
 
 	va_list all;
 	unsigned int i, j;
+	char *separator = "";
 
-	f  ops[] = {
+	f ops[] = {
 		{"c", op_c},
 		{"i", op_i},
 		{"f", op_f},
@@ -68,9 +86,10 @@ void print_all(const char * const format, ...)
 		{
 			if (ops[j].op[0] == format[i])
 			{
+				printf("%s", separator);
+				separator = ", ";
 				ops[j].f(all);
-				if(format[i +1])
-					printf(", ");
+				break;
 			}
 			j++;
 		}

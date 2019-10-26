@@ -27,7 +27,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			break;
 		}
-		printf(",");
+		printf("%s", separator);
 	}
 	printf("\n");
 	va_end(numbers);
