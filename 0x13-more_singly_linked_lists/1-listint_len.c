@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * listing_len - function that validate the number of elements.
+ * listint_len - function that validate the number of elements.
  * @h: name of the list
  * Return: the number of nodes.
  */
