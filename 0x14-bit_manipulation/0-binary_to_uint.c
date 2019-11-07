@@ -29,12 +29,12 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int bin = 1, count, value = 0;
 
 	if (b == NULL)
-		return (NULL);
+		return (0);
 	count = _strlen(b);
 	while (count)
 	{
 		if (!(b[count - 1] == 48 || b[count - 1] == 49))
-			return (NULL);
+			return (0);
 		if (b[count - 1] == 49)
 		{
 			value += bin;
