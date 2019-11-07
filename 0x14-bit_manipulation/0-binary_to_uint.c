@@ -26,21 +26,18 @@ int _strlen(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int bin = 1, count, value = 0;
+	unsigned int value = 0;
 
 	if (b == NULL)
 		return (0);
-	count = _strlen(b);
-	while (count)
+	while (*b != '\0')
 	{
-		if (!(b[count - 1] == 48 || b[count - 1] == 49))
+		value = value << 1;
+		if (*b != '1' && *b != '0')
 			return (0);
-		if (b[count - 1] == 49)
-		{
-			value += bin;
-		}
-		bin *= 2;
-		--count;
+		else if (*b == '1')
+			value = value | 1;
+		b++;
 	}
 	return (value);
 }
