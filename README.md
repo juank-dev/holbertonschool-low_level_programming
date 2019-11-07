@@ -23,3 +23,4 @@
 * 0x10. C - Variadic functions
 * 0x12. C - Singly linked lists
 * 0x13. C - More singly linked lists
+* 0x14. C - Bit manipulation
