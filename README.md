@@ -2,7 +2,7 @@
 
 ## **IN THIS REPOSITORY REVIEW THE NEXT TOPICS IN C PROGRAMMING LANGUAGE**
 
-![Alt](https://i.imgur.com/cdYTRZi.jpg)
+<img src="https://i.imgur.com/cdYTRZi.jpg" alt="Printf" width="500" height="300">
 
 * 0x00. C - Hello, World
 * 0x01. C - Variables, if, else, while
@@ -24,3 +24,4 @@
 * 0x12. C - Singly linked lists
 * 0x13. C - More singly linked lists
 * 0x14. C - Bit manipulation
+* 0x15. C - File I/O
