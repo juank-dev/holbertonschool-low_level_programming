@@ -12,21 +12,25 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int index = 0;
 	char dict[1024] = "";
 	int count = 0;
+	hash_node_t *tmp;
 
 	while (index < ht->size)
 	{
 		if (ht->array[index] != NULL)
 		{
-			if (count != 0)
+			tmp = ht->array[index];
+			while (tmp != NULL)
 			{
-				strcat(dict, ", ");
+				if (count != 0)
+					strcat(dict, ", ");
+				strcat(dict, "'");
+				strcat(dict, tmp->key);
+				strcat(dict, "': '");
+				strcat(dict, tmp->value);
+				strcat(dict, "'");
+				tmp = tmp->next;
+				count++;
 			}
-			strcat(dict, "'");
-			strcat(dict, ht->array[index]->key);
-			strcat(dict, "': '");
-			strcat(dict, ht->array[index]->value);
-			strcat(dict, "'");
-			count++;
 		}
 		index++;
 	}
