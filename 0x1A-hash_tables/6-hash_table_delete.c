@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - Print in a dictionary the and the value
+ * hash_table_delete - delete the hash table
  * @ht: Struct Hash Table
  * Return: None
  */
