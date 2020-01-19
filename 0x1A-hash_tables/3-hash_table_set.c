@@ -23,6 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(key, ht->array[idx]->key) == 0)
 			ht->array[idx]->value = strdup(value);
+		return (1);
 	}
 
 	if (ht->array[idx] == NULL)
