@@ -18,13 +18,13 @@ def island_perimeter(grid):
                 if i - 1 < 0:
                     k = 1
                     perimeter += 1
-                elif j - 1 < 0:
+                if j - 1 < 0:
                     h = 1
                     perimeter += 1
-                elif j == len(grid[i]) -1:
+                if j == len(grid[i]) -1:
                     h = j - 1
                     perimeter += 1
-                elif i == len(grid) -1:
+                if i == len(grid) -1:
                     k = i - 1
                     perimeter += 1
                 if grid[k - 1][j] == 0:
