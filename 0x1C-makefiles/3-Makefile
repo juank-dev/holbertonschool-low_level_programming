@@ -13,7 +13,8 @@ all: program
 program: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c m.h
+%.o: %.c
+	$(CC) -c $< -o $@
 
 holberton.o: holberton.c m.h
 
