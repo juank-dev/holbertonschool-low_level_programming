@@ -1,0 +1,7 @@
+# This is a Makefile
+all: program
+
+# execute the program
+
+program: main.c holberton.c
+	gcc main.c holberton.c -o holberton

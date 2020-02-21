@@ -1,0 +1,10 @@
+CC = gcc
+SRC = main.c holberton.c
+
+# This is a Makefile
+all: program
+
+# execute the program
+
+program: $(SRC)
+	$(CC) $(SRC) -o holberton

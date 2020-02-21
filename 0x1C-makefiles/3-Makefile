@@ -1,0 +1,30 @@
+# variables
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+RM = rm
+
+# This is a Makefile
+all: program
+
+# execute the program
+
+program: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+main.o: main.c m.h
+
+holberton.o: holberton.c m.h
+
+clean:
+	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean:
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
+
+re: oclean all
