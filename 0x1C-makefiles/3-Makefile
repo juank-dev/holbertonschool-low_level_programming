@@ -16,8 +16,6 @@ program: $(OBJ)
 %.o: %.c
 	$(CC) -c $< -o $@
 
-holberton.o: holberton.c m.h
-
 clean:
 	$(RM) -f *~ $(NAME)
 
